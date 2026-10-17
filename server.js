@@ -11,10 +11,8 @@ const { SHOW_REASONING, getReasoningPayload, resolveEffectiveThinking, StreamNor
 const { extractLeakedToolCalls, ToolCallStreamRecovery } = require('./tools');
 
 const app = express();
-const app = express();
-app.use(cors());          // ← ADD THIS LINE HERE
-const PORT = process.env.PORT || 3000;   
-const PORT = process.env.PORT || 3000;
+app.use(cors());
+app.use(express.json());   
 
 // ─── Configuration ──────────────────────────────────────────────────────
 
